@@ -16,8 +16,17 @@ st.markdown(
     - 서울시 구별 모범음식점 지정현황 분석입니다. [데이터 페이지](https://data.seoul.go.kr/dataList/OA-11295/S/1/datasetView.do)
     
     ### 데이터 살펴보기
-    - Use a neural net to [analyze the Udacity Self-driving Car Image
-        Dataset](https://github.com/streamlit/demo-self-driving)
-    - Explore a [New York City rideshare dataset](https://github.com/streamlit/demo-uber-nyc-pickups)
 """
 )
+@st.cache
+def load_data():
+    data = pd.read_csv("https://drive.google.com/file/d/1QAcWrH-XzR4Fq2GhoQ65gyA94QA7X6Qn/view?usp=sharing", encoding='utf-8')
+    return data
+
+data_load_state = st.text('Loading data...')
+df = load_data()
+data_load_state.text("Done! (using st.cache)")
+
+if st.checkbox('Show raw data'):
+    st.subheader('Raw data')
+    st.write(data)
