@@ -19,6 +19,7 @@ df = load_data()
 lat = df['위도'].sum()/(len(df)-df[df['위도'] == 0].shape[0])
 long = df['경도'].sum()/(len(df)-df[df['경도'] == 0].shape[0])
 
+st.subheader('Folium을 이용한 모범음식점 시각화')
 m = folium.Map(location=[lat,long], zoom_start=12)
 for bst in df.index[:]:
     row = df.loc[bst]
@@ -55,3 +56,17 @@ for bst in df.index[:]:
             fill = True,
         ).add_to(m)
 folium_static(m)
+
+st.subheader(' 경도와 위도 자치구별 시각화 ')
+drop_zero=df[df["위도"]==0].index
+drop_zero = df.drop(drop_zero)
+plt.figure(figsize=(12, 10))
+sns.scatterplot(data=drop_zero, x="경도", y="위도", hue="구")
+plt.legend(bbox_to_anchor=(1,1))
+
+st.subheader(' 경도와 위도 자치구별 시각화 ver2(jointplot의 hex 사용) ')
+plt.figure(figsize=(12, 10))
+sns.jointplot(data=df[df['위도'] != 0], x="경도", y="위도", kind="hex")
+
+st.subheader(' 구별 면적별 업장개수 ')
+px.histogram(df, x="구", color="면적분류", width=1300, height=500, textauto=True, title="구별 면적별 업장개수")
