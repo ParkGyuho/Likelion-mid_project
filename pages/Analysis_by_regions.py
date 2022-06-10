@@ -5,6 +5,7 @@ import pandas as pd
 import folium
 from streamlit_folium import folium_static
 from matplotlib import pyplot as plt
+import seaborn as sns
 
 st.set_page_config(page_title="모범음식점 위치", page_icon="🗺️")
 
