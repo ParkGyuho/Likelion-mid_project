@@ -20,7 +20,7 @@ st.markdown(
 )
 @st.cache
 def load_data():
-    data = pd.read_csv("https://drive.google.com/file/d/1QAcWrH-XzR4Fq2GhoQ65gyA94QA7X6Qn/view?usp=sharing", encoding='utf-8')
+    data = pd.read_csv("all_seoul_good_rest_final.csv", encoding='utf-8')
     return data
 
 data_load_state = st.text('Loading data...')
