@@ -8,7 +8,7 @@ st.set_page_config(
 
 st.write("# 🍚오늘은 뭘4먹지🍣의 미드 프로젝트 홈페이지입니다.")
 
-st.sidebar.success("Select a demo above.")
+st.sidebar.success("Select a page above.")
 
 st.markdown(
     """
