@@ -3,7 +3,7 @@ import time
 import numpy as np
 import pandas as pd
 import folium
-import plotly.express as px
+from streamlit_folium import folium_static
 
 st.set_page_config(page_title="모범음식점 위치", page_icon="🗺️")
 
@@ -54,7 +54,7 @@ for bst in df.index[:]:
             color = "yellow",
             fill = True,
         ).add_to(m)
-m
+folium_static(m)
 
 '''
 st.sidebar.header("Plotting Demo")
