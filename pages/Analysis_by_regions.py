@@ -38,12 +38,12 @@ st.set_page_config(page_title="모범음식점 위치", page_icon="🗺️")
 
 # style 설정은 꼭 폰트설정 위에서 합니다.
 # style 에 폰트 설정이 들어있으면 한글폰트가 초기화 되어 한글이 깨집니다.
-plt.style.use("seaborn")
+#plt.style.use("seaborn")
 # 폰트설정
-plt.rc("font", family=get_font_family())
+#plt.rc("font", family=get_font_family())
 
 # 마이너스폰트 설정
-plt.rc("axes", unicode_minus=False)
+#plt.rc("axes", unicode_minus=False)
 
 st.markdown("# 서울시 모범음식점 위치")
 
