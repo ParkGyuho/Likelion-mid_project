@@ -23,8 +23,8 @@ def get_font_family():
         font_family = "Malgun Gothic"
     else:
         # Linux(colab)
-        !apt-get install fonts-nanum -qq  > /dev/null
-        !fc-cache -fv
+#         !apt-get install fonts-nanum -qq  > /dev/null
+#         !fc-cache -fv
 
         import matplotlib as mpl
         mpl.font_manager._rebuild()
