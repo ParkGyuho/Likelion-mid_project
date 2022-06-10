@@ -4,6 +4,6 @@ streamlit
 finance-datareader
 plotly
 seaborn
-matplotlib
+matplotlib.pyplot
 folium
 streamlit_folium
