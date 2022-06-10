@@ -4,7 +4,7 @@ import numpy as np
 import pandas as pd
 import folium
 from streamlit_folium import folium_static
-from matpoltlib import pyplot as plt
+from matplotlib import pyplot as plt
 
 st.set_page_config(page_title="모범음식점 위치", page_icon="🗺️")
 
