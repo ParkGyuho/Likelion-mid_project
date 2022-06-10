@@ -72,4 +72,4 @@ plt.figure(figsize=(12, 10))
 sns.jointplot(data=df[df['위도'] != 0], x="경도", y="위도", kind="hex")
 
 st.subheader(' 구별 면적별 업장개수 ')
-px.histogram(df, x="구", color="면적분류", width=1300, height=500, textauto=True, title="구별 면적별 업장개수")
+px.histogram(df, x="구", color="면적분류", width=1300, height=500, title="구별 면적별 업장개수")
