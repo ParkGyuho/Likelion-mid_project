@@ -10,7 +10,7 @@ st.set_option('deprecation.showPyplotGlobalUse', False)
 
 @st.cache
 def load_rest_data():
-    data = pd.read_csv("../all_seoul_good_rest_final.csv", encoding='utf-8')
+    data = pd.read_csv("all_seoul_good_rest_final.csv", encoding='utf-8')
     return data
 
 
