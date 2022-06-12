@@ -5,7 +5,7 @@ from matplotlib import pyplot as plt
 from plotly import express as px
 import koreanize_matplotlib
 
-st.set_page_config(page_title="Mapping Demo", page_icon="🌍")
+st.set_page_config(page_title="Analysis Page", page_icon="🌍")
 st.set_option('deprecation.showPyplotGlobalUse', False)
 
 
@@ -27,13 +27,6 @@ df = load_rest_data()
 gu_pop = load_pop_data()
 
 st.markdown("# 모범음식점 밀도와 생활인구 상관관계")
-
-
-# style 설정은 꼭 폰트설정 위에서 합니다.
-# style 에 폰트 설정이 들어있으면 한글폰트가 초기화 되어 한글이 깨집니다.
-plt.style.use("seaborn")
-# 폰트설정
-plt.rc("font", family='Malgun Gothic')
 
 # 마이너스폰트 설정
 plt.rc('axes', unicode_minus=False)
