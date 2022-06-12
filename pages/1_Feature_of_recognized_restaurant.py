@@ -7,6 +7,7 @@ from streamlit_folium import folium_static
 from matplotlib import pyplot as plt
 import seaborn as sns
 from plotly import express as px
+import koreanize_matplotlib
 
 st.set_page_config(page_title="서울시 모범음식점 현황", page_icon="🗺️")
 

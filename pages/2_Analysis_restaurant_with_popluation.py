@@ -3,6 +3,7 @@ import pandas as pd
 import seaborn as sns
 from matplotlib import pyplot as plt
 from plotly import express as px
+import koreanize_matplotlib
 
 st.set_page_config(page_title="Mapping Demo", page_icon="🌍")
 st.set_option('deprecation.showPyplotGlobalUse', False)
